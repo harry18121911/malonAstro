@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  linkText: string;
+  imageOne:string;
+  imageTwo:string;
+}
+const { linkText, imageOne, imageTwo } = Astro.props;
+---
+
+<section class="py-12">
+  <div class="grid grid-cols-2 p-4">
+    <div>
+      <h1 class="text-red-600/100 text-5xl italic max-w-xs pb-8">Sobre nosotros</h1>
+      <p class="text-white max-w-sm text-xl">
+        Somos un centro de fitness no convencional.
+      </p>
+      <br/>
+      <p class="text-white max-w-sm text-xl">
+        Nuestro modelo de entrenamiento está basado en años de estudio y práctica del movimiento humano.
+      </p>
+      <br/>
+      <p class="text-white max-w-sm text-xl">
+        Nos enfocamos en priorizar, mejorar y optimizar la salud a travéz del movimiento de calidad acorde a nuestra especie.
+      </p>
+
+    </div>
+    <div class="grid grid-cols-2">
+        <Image src={'/images/'+imageOne} 
+        width={600} 
+        height={600/1.5} 
+        alt="Gym Instructor" 
+        class="rounded-md object-cover w-48"/>
+        <Image src={'/images/'+imageTwo}
+         width={600} height={600/1.5} alt="Boxing Instructor" class="rounded-md object-cover w-48 pt-8"/>
+    </div>
+  </div>
+</section>

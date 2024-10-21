@@ -1,0 +1,47 @@
+---
+interface Props {
+  callToAction: string;
+}
+
+const { callToAction } = Astro.props;
+const imageURL = "gym-ropes.jpg";
+const bgStyle = { backgroundImage: `url('/images/${imageURL}')` };
+const content = [
+  {
+    heading: "DIRECCIÓN",
+    info: "Avenida Ávalos 138"
+
+  },
+  {
+    heading: "Horario de atención",
+    info: "07:30 a 21.00 horas",
+  },
+  {
+    heading: "Número de Conctacto",
+    info: "(123) 456-7890",
+  },
+];
+---
+
+<footer
+  class="bg-cover bg-no-repeat bg-gray-700 bg-blend-multiply"
+  style={bgStyle}
+>
+  <div class="mx-auto max-w-screen">
+    <h1
+      class="font-extrabold text-5xl text-red-500 tracking-wide uppercase italic p-36 max-w-xl"
+    >
+      {callToAction}
+    </h1>
+    <div class="bg-red-600 grid grid-cols-1 md:grid-cols-3">
+      {
+        content.map((item) => (
+          <div class="p-12">
+            <h1 class="uppercase text-2xl italic">{item.heading}</h1>
+            <p class="text-xl">{item.info}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</footer>
