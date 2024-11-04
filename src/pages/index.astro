@@ -1,17 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import Offers from '../components/Offers.astro';
 import Testimonials from '../components/Testimonials.astro';
 import HeroFooter from '../components/HeroFooter.astro';
+import HeroHeader from '../components/HeroHeader.astro';
 ---
 
 <Layout title="Malón en Movimiento">
 	<main>
 		<!-- Add Call To action, company Name and Button text2 -->
-	<Hero callToAction='Unete a los rebeldes del movimiento.' companyName='Malón en Movimiento'/>
-	<About linkText="/" imageOne='gym-instructor.jpg', imageTwo='gym-femaleinstructor.jpg' />
+	<HeroHeader callToAction='Unete a los rebeldes del movimiento.' companyName='Malón en Movimiento'/>
+	<About linkText="/" imageOne='image1.jpg', imageTwo='image2.jpg' />
 	<Offers />
 	<Testimonials />
 	<HeroFooter callToAction='Empieza a entrenar hoy mismo!' />

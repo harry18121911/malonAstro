@@ -17,8 +17,8 @@ const content = [
     info: "07:30 a 21.00 horas",
   },
   {
-    heading: "Número de Conctacto",
-    info: "(123) 456-7890",
+    heading: "Número de Contacto",
+    info: "+54 9 362 472-1797",
   },
 ];
 ---
@@ -29,19 +29,27 @@ const content = [
 >
   <div class="mx-auto max-w-screen">
     <h1
-      class="font-extrabold text-5xl text-red-500 tracking-wide uppercase italic p-36 max-w-xl"
+      class="font-extrabold text-5xl text-red-500 tracking-wide uppercase justify-self-center italic p-16  max-w-xl"
     >
       {callToAction}
     </h1>
-    <div class="bg-red-600 grid grid-cols-1 md:grid-cols-3">
+    <div class="bg-red-600 grid grid-cols-1 md:grid-cols-4 mx-6">
       {
         content.map((item) => (
-          <div class="p-12">
-            <h1 class="uppercase text-2xl italic">{item.heading}</h1>
-            <p class="text-xl">{item.info}</p>
+          <div class="p-12 justify-items-center">
+            <h1 class="uppercase text-3xl italic">{item.heading}</h1>
+            <p class="text-3xl">{item.info}</p>
           </div>
         ))
       }
+    <div class="p-12 justify-items-center" >
+        <h1 class="uppercase text-3xl italic">ENCONTRANOS EN INSTAGRAM</h1>
+        <h1 class="uppercase text-3xl italic">PULSANDO EL ÍCONO</h1>
+        <a href="https://www.instagram.com/malonenmovimiento/?hl=es" target="_blank" rel="noopener noreferrer">
+          <img src="../../public/images/instagramIcon.png" class="size-32"  />    
+        </a> 
+      </div>
     </div>
+    
   </div>
 </footer>

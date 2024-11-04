@@ -2,27 +2,32 @@
 import ImageCard from "./ImageCard.astro";
 const offers = [
     {
-        imageURL:"dumbbells.jpg",
-        offerText:"Kinisiología"
+        imageURL:"cardInfo1.jpeg",
+        offerText:""
     },
     {
-        imageURL:"rowing.jpg",
-        offerText:"Clases grupales"
+        imageURL:"cardInfo2.jpeg",
+        offerText:""
     },
     {
-        imageURL:"skipping.jpg",
-        offerText:"Entrenamiento personalizado"
-    }
+        imageURL:"cardInfo3.jpeg",
+        offerText:""
+    },
+    {
+        imageURL:"cardInfo4.jpeg",
+        offerText:""
+    },
+  
 ]
 ---
 
 
-<section class="py-12 text-center">
-<h1 class="text-red-600/100 text-5xl mb-4 italic uppercase">Lo que ofrecemos</h1>
-<div class="grid grid-cols-1 md:grid-cols-3">
+<section class="text-center">
+<h1 class="text-red-600/100 text-5xl mb-4 pt-10 italic uppercase">Lo que ofrecemos</h1>
+<div class="grid grid-cols-1 md:grid-cols-4 ">
 {
     offers.map((offer)=>(
-        <ImageCard imageURL={offer.imageURL} text={offer.offerText} />
+        <ImageCard imageURL={offer.imageURL}  />
     ))
 }
 
